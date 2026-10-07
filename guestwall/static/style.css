@@ -1,0 +1,26 @@
+:root{ --bg:#faf8f5; --ink:#3a3632; --muted:#8a837b; --accent:#7a9b76; --card:#fff; --line:#e8e2da; }
+*{box-sizing:border-box}
+body{margin:0;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+header,section,main{max-width:720px;margin:0 auto;padding:16px 20px}
+h1{font-size:1.6rem;margin:.4em 0}
+h2{font-size:1.15rem;border-bottom:1px solid var(--line);padding-bottom:.3em}
+.tagline,.hint,.meta{color:var(--muted);font-size:.9rem}
+nav a,a{color:var(--accent)}
+form label{display:block;margin:.6em 0 .2em}
+input,textarea{width:100%;padding:.5em;border:1px solid var(--line);border-radius:8px;background:#fff;font:inherit}
+label.inline{display:flex;gap:.5em;align-items:center}
+label.inline input{width:auto}
+fieldset{border:1px dashed var(--line);border-radius:8px;margin:.8em 0}
+button{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:.55em 1.2em;font:inherit;cursor:pointer}
+button:hover{filter:brightness(1.05)}
+button:disabled{opacity:.6;cursor:default}
+#wall{list-style:none;padding:0}
+.msg,.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0}
+.content{white-space:pre-wrap;word-break:break-word;margin:.2em 0}
+.meta .dot{margin:0 .5em;color:var(--line)}
+.empty{background:#f3efe9;border:1px dashed var(--line);border-radius:12px;padding:24px;text-align:center;color:var(--muted)}
+.ok{color:var(--accent)} .err{color:#b0563f}
+.actions{display:flex;gap:.5em;flex-wrap:wrap;margin-top:.5em}
+.actions button{background:#efe9e1;color:var(--ink)}
+.timeline{font-size:.85rem;color:var(--muted);padding-left:1.2em}
+.editbox{border-top:1px dashed var(--line);margin-top:.6em;padding-top:.6em}

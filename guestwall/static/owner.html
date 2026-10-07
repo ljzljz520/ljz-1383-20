@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>站主后台</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/owner.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>站主后台</h1>
+  <nav><a href="/">返回留言墙</a></nav>
+</header>
+<section id="authBox">
+  <label>站主令牌 <input id="ownerToken" type="password" autocomplete="off"></label>
+  <button id="saveToken">进入</button>
+  <p id="authMsg" class="hint"></p>
+</section>
+<main id="panel" hidden>
+  <section>
+    <h2>待处理 <span id="pendingCount"></span></h2>
+    <div id="pendingList"></div>
+    <p id="pendingEmpty" class="empty" hidden>没有待处理的留言，喝口茶吧。</p>
+  </section>
+  <section>
+    <h2>内容冲突（审核期间被修改）</h2>
+    <div id="conflictList"></div>
+    <p id="conflictEmpty" class="empty" hidden>没有待处理冲突。</p>
+  </section>
+  <section><h2>已公开</h2><div id="approvedList"></div></section>
+  <section><h2>未通过 / 申诉</h2><div id="rejectedList"></div></section>
+  <section><h2>已撤回</h2><div id="withdrawnList"></div></section>
+  <section>
+    <h2>通知记录</h2>
+    <p class="hint">「请求成功」不等于「已送达」：以下状态反映实际可确认的程度。</p>
+    <div id="notifList"></div>
+    <p id="notifEmpty" class="empty" hidden>暂无通知记录。</p>
+  </section>
+</main>
+</body>
+</html>

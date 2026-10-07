@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>访客留言墙</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/wall.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>访客留言墙</h1>
+  <p class="tagline">写下你的寄语，站主审核通过后会展示在这里。</p>
+  <nav><a href="/status">管理我的留言</a> · <a href="/owner">站主后台</a></nav>
+</header>
+
+<section class="submit">
+  <h2>写下寄语</h2>
+  <form id="submitForm">
+    <label>昵称（公开）<input id="fName" maxlength="40" required></label>
+    <label>与这里的关系（公开）<input id="fRel" maxlength="60" required placeholder="例如：老同学 / 路过的读者"></label>
+    <label>寄语（公开）<textarea id="fContent" maxlength="1000" required rows="4"></textarea></label>
+    <fieldset class="contact">
+      <legend>通知（可选，绝不公开）</legend>
+      <label>邮箱 <input id="fEmail" type="email" maxlength="120" placeholder="仅用于审核结果通知"></label>
+      <label class="inline"><input id="fNotify" type="checkbox"> 审核结果通知我（需填写邮箱）</label>
+      <p class="hint">邮箱只保存在受限存储中用于通知，公开页与公开 API 都不会包含它；可随时在「管理我的留言」中请求清除。</p>
+    </fieldset>
+    <button id="submitBtn" type="submit">提交（需审核后公开）</button>
+    <p id="submitMsg" role="status"></p>
+  </form>
+</section>
+
+<section class="wall">
+  <h2>公开寄语</h2>
+  {{EMPTY_STATE}}
+  <ul id="wall">{{ITEMS}}</ul>
+  <button id="loadMore" data-cursor="{{NEXT_CURSOR}}" {{MORE_HIDDEN}}>加载更多</button>
+</section>
+</body>
+</html>
