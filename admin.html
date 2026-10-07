@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言审核后台 | 灵墨创意</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/guestbook.css">
+    <script src="js/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">灵墨创意</a>
+                <ul class="nav-links">
+                    <li><a href="guestbook.html">留言墙</a></li>
+                    <li><a href="admin.html" class="active">审核后台</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wall-main container">
+        <section class="wall-hero">
+            <h1>留言审核后台</h1>
+            <p class="wall-hint" id="mode-banner"></p>
+        </section>
+
+        <section id="login-box" class="wall-submit glass" hidden>
+            <h2>站主登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="token-input">站主令牌（ADMIN_TOKEN）</label>
+                    <input id="token-input" type="password" class="form-control" autocomplete="current-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">进入后台</button>
+                <p class="form-status error" id="login-msg"></p>
+            </form>
+        </section>
+
+        <div id="admin-panel" hidden>
+            <div class="admin-toolbar">
+                <button id="refresh-btn" type="button" class="btn btn-outline">刷新</button>
+            </div>
+
+            <section class="admin-section">
+                <h2>⚠ 待处理冲突</h2>
+                <p class="section-hint">审核与修改发生竞争的留言：请基于最新版本重新审核。</p>
+                <p class="wall-empty-small" id="conflict-empty">没有待处理的冲突，一切井然有序。</p>
+                <ul id="conflict-list" class="admin-list"></ul>
+            </section>
+
+            <section class="admin-section">
+                <h2>待审核</h2>
+                <p class="wall-empty-small" id="pending-empty">暂无待审核的留言，喝口茶吧 🍵</p>
+                <ul id="pending-list" class="admin-list"></ul>
+            </section>
+
+            <section class="admin-section">
+                <h2>私密收件箱（仅站主可见）</h2>
+                <p class="wall-empty-small" id="inbox-empty">收件箱是空的。</p>
+                <ul id="inbox-list" class="admin-list"></ul>
+            </section>
+
+            <section class="admin-section">
+                <h2>申诉复核</h2>
+                <p class="wall-empty-small" id="appealed-empty">没有待复核的申诉。</p>
+                <ul id="appealed-list" class="admin-list"></ul>
+            </section>
+
+            <section class="admin-section">
+                <h2>最近已公开</h2>
+                <p class="wall-empty-small" id="approved-empty">还没有公开任何留言。</p>
+                <ul id="approved-list" class="admin-list"></ul>
+            </section>
+
+            <section class="admin-section">
+                <h2>通知外发</h2>
+                <p class="section-hint" id="notify-banner"></p>
+                <p class="wall-empty-small" id="outbox-empty">暂无外发通知。</p>
+                <ul id="outbox-list" class="admin-list"></ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 林墨的个人主页. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

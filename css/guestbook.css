@@ -1,0 +1,329 @@
+/* 留言墙 / 审核后台 专用样式（配合全局 style.css 的设计变量） */
+
+.wall-main {
+    padding: 10rem 2rem 6rem;
+    max-width: 900px;
+}
+
+.wall-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.wall-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.wall-hint {
+    color: var(--text-muted);
+}
+
+.wall-list {
+    display: grid;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.wall-card {
+    padding: 1.6rem 2rem;
+    border-radius: 1.2rem;
+}
+
+.wall-content {
+    white-space: pre-wrap; /* 保留换行，纯文本渲染，不解析任何标记 */
+    word-break: break-word;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+}
+
+.wall-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.wall-relation {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.wall-empty {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 1.2rem;
+    color: var(--text-muted);
+    line-height: 2;
+}
+
+.wall-empty-small {
+    color: var(--text-muted);
+    padding: 1rem 0;
+}
+
+.wall-more {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.wall-submit,
+.wall-mine {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.wall-submit h2,
+.wall-mine h2,
+.admin-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.form-group {
+    margin-bottom: 1.6rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.form-check label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 400;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 0.8rem;
+    color: white;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+textarea.form-control {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.req {
+    color: var(--secondary);
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+}
+
+.btn[disabled] {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+.form-status {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    min-height: 1.5em;
+}
+
+.form-status.error {
+    color: var(--secondary);
+}
+
+.edit-hint {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* 我的留言 */
+.mine-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.mine-item {
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 1.2rem 1.5rem;
+}
+
+.mine-head {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.mine-status {
+    padding: 0.2rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.st-approved { color: #4ade80; }
+.st-pending, .st-inbox { color: #facc15; }
+.st-rejected { color: #f87171; }
+.st-appealed { color: #38bdf8; }
+.st-withdrawn { color: var(--text-muted); }
+
+.mine-snippet {
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 60%;
+}
+
+.mine-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.mine-btn {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    border-radius: 50px;
+    padding: 0.35rem 1.1rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.mine-btn:hover {
+    color: white;
+    border-color: var(--primary);
+}
+
+/* 审核后台 */
+.admin-toolbar {
+    margin-bottom: 2rem;
+}
+
+.admin-section {
+    margin-bottom: 3rem;
+}
+
+.section-hint {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.admin-list {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.admin-card {
+    padding: 1.6rem 2rem;
+    border-radius: 1.2rem;
+}
+
+.admin-card.has-conflict {
+    border-color: #f59e0b;
+}
+
+.conflict-flag {
+    color: #f59e0b;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.admin-content {
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-bottom: 0.8rem;
+}
+
+.admin-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.admin-actions button {
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1.4rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.act-approve, .act-reapprove {
+    background: var(--primary);
+    color: white;
+}
+
+.act-reject {
+    background: transparent;
+    border: 1px solid var(--secondary) !important;
+    color: var(--secondary);
+}
+
+.outbox-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+    .wall-main { padding-top: 8rem; }
+    .wall-hero h1 { font-size: 2rem; }
+    .mine-snippet { max-width: 100%; }
+}

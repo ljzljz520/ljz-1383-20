@@ -1,0 +1,14 @@
+{
+  "name": "lingmo-homepage",
+  "version": "1.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "个人创意主页 + 访客留言审核墙（零依赖 Node 后端）",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}
